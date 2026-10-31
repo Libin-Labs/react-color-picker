@@ -1,0 +1,63 @@
+.lp-color-picker {
+  --lp-color-accent: #4f46e5;
+  --lp-color-surface: #fff;
+  --lp-color-text: #172033;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 28rem;
+  padding: 1rem;
+  border: 1px solid #aeb8c7;
+  border-radius: 0.5rem;
+  background: var(--lp-color-surface);
+  color: var(--lp-color-text);
+  font:
+    1rem/1.5 system-ui,
+    sans-serif;
+}
+.lp-color-picker label {
+  display: grid;
+  gap: 0.25rem;
+}
+.lp-color-picker input {
+  min-width: 0;
+  max-width: 100%;
+  font: inherit;
+  accent-color: var(--lp-color-accent);
+}
+.lp-color-picker__channels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.lp-color-picker__preview {
+  min-height: 4rem;
+  border: 1px solid #aeb8c7;
+  border-radius: 0.25rem;
+}
+.lp-color-picker__palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lp-color-picker__palette button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid #7b8494;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.lp-color-picker__palette button[aria-pressed='true'] {
+  outline: 2px solid var(--lp-color-accent);
+  outline-offset: 2px;
+}
+.lp-color-picker :focus-visible {
+  outline: 3px solid var(--lp-color-accent);
+  outline-offset: 3px;
+}
+.lp-color-picker [role='alert'] {
+  color: #b91c1c;
+  margin: 0;
+}
+.lp-color-picker output {
+  overflow-wrap: anywhere;
+}
